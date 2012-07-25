@@ -80,7 +80,7 @@ void TimeProbeCollector::Report(std::ostream & os) {
          total+=pval;
          variance+=pval*pval;
       }
-      variance-=mean*mean/static_cast<ValueType>(count1);
+      variance-=total*total/static_cast<ValueType>(count1);
       mean=total/static_cast<ValueType>(count1);
       if(count1>1) {
          variance/=static_cast<ValueType>(count1-1);
